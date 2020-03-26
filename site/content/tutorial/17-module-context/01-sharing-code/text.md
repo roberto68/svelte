@@ -22,3 +22,6 @@ function stopOthers() {
 	current = audio;
 }
 ```
+I was bit confused about this lesson: I play some track (current is set to corresponding audio tag, e.g current = "Danube waltz").
+Then I cick play on other track ("other audio tag", e.g Mars). Play button triggers the "stopOthers" function - which checks if there's some track playing (current is "set" - not null) ``and now the part that was magic at 1st`` and whether the recent audio tag (Mars) user just clicked !== current (currently playing Waltz). 
+The statement is true => currently playing Waltz is paused and the just "clicked audio" (Mars) starts playing and current = "Mars"
